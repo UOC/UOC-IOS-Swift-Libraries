@@ -44,7 +44,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
         shouldStartLoadWithRequest request: NSURLRequest!,
         navigationType: UIWebViewNavigationType) -> Bool{
             var urlRequest = request.URL.absoluteString
-            println(urlRequest)
+            //println(urlRequest)
             if (urlRequest.rangeOfString("?code=").isEmpty) {
                 //println("No token request provided")
                 return true

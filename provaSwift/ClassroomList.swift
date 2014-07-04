@@ -43,6 +43,10 @@ class ClassroomList: NSObject {
             self.setDatos(classroomsDict)
         }
         
+        else {
+            println("Classrooms nil")
+        }
+        
         return self.classrooms
     }
 }
