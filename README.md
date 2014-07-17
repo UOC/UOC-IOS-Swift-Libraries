@@ -15,8 +15,8 @@ The library also contains some examples explaining how to use some of the functi
 
 * /user Get
 * /mobileresources Get
-* /calendar/events Post
-* /classrooms Get
+* /calendar/events Get and Post
+* /classrooms Get and /classrooms/{id}/materials Get
 * /people Get
 
 
@@ -24,7 +24,7 @@ The library also contains some examples explaining how to use some of the functi
 
 Step 1: Download this repository.
 
-Step 2: Open the project file (Open APIS.xcodeproj) with Xcode 6 beta 2. It does NOT work with Xcode 6 beta 3.
+Step 2: Open the project file (Open APIS.xcodeproj) with Xcode 6 beta 3. 
 
 Step 3: Modify the Constants.swift file with your secret and client and change the server Url.
 
