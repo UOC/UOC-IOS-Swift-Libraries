@@ -26,14 +26,14 @@ class BoardList: NSObject {
     func getClassroomsIdBoards(idenC:NSString, withToken token:NSString) -> NSMutableArray{
         self.boards.removeAllObjects()
         
-        var boardsURL = NSURL(string: baseUrl + "classrooms/" + idenC + "/boards?access_token=" + token)
+        var boardsURL = NSURL(string: "\(baseUrl)classrooms/\(idenC)/boards?access_token=\(token)")
         
         var boardsData = NSData.dataWithContentsOfURL(boardsURL, options: nil, error: nil)
         
         if (boardsData != nil){
             var boardsDict = NSJSONSerialization.JSONObjectWithData(boardsData, options: nil, error: nil) as NSDictionary
             
-            if (boardsDict.valueForKey("error") != nil){
+            if (boardsDict.valueForKey("error")){
                 println("Error en ClassroomsIdBoards GET")
                 return self.boards
             }
@@ -46,14 +46,14 @@ class BoardList: NSObject {
     func getSubjectsIdBoards(idenS:NSString, withToken token:NSString) -> NSMutableArray{
         self.boards.removeAllObjects()
         
-        var boardsURL = NSURL(string: baseUrl + "subjects/" + idenS + "/boards?access_token=" + token)
+        var boardsURL = NSURL(string: "\(baseUrl)subjects/\(idenS)/boards?access_token=\(token)")
         
         var boardsData = NSData.dataWithContentsOfURL(boardsURL, options: nil, error: nil)
         
         if (boardsData != nil){
             var boardsDict = NSJSONSerialization.JSONObjectWithData(boardsData, options: nil, error: nil) as NSDictionary
             
-            if (boardsDict.valueForKey("error") != nil){
+            if (boardsDict.valueForKey("error")){
                 println("Error en SubjectsIdBoards GET")
                 return self.boards
             }

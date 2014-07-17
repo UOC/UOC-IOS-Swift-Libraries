@@ -57,7 +57,42 @@ class MobileResourcesTableViewController: UITableViewController {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
 
-        cell.text = CellIdentifier
+        cell.textLabel.text = CellIdentifier
+        
+        // Here the application stores the data from the logo of the other application.
+        // If we store the images we save network connections and we can get the logos faster.
+        
+        var stdDefaults = NSUserDefaults.standardUserDefaults()
+        
+        // We check if the logo is stored
+        if(stdDefaults.objectForKey("\(app.nameIOS)URL")){
+            if(stdDefaults.objectForKey("\(app.nameIOS)URL") as NSString == app.logoIOS){
+                var image = UIImage(data: stdDefaults.objectForKey("\(app.nameIOS)Data") as NSData)
+                cell.imageView.image = image
+            }
+            else {
+                // Esborrar
+                stdDefaults.setObject(app.logoIOS, forKey: "\(app.nameIOS)URL")
+                var logoURL = NSURL(string: app.logoIOS)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+                var imageData = NSData(contentsOfURL: logoURL)
+                stdDefaults.setObject(imageData, forKey: "\(app.nameIOS)Data")
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                var image = UIImage(data: imageData)
+                cell.imageView.image = image
+            }
+        }
+        else {
+            stdDefaults.setObject(app.logoIOS, forKey: "\(app.nameIOS)URL")
+            var logoURL = NSURL(string: app.logoIOS)
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            var imageData = NSData(contentsOfURL: logoURL)
+            stdDefaults.setObject(imageData, forKey: "\(app.nameIOS)Data")
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            var image = UIImage(data: imageData)
+            cell.imageView.image = image
+        }
+        
         // Configure the cell...
 
         return cell

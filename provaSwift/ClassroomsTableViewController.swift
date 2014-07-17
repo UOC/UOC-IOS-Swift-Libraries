@@ -56,7 +56,7 @@ class ClassroomsTableViewController: UITableViewController {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
-        cell.text = CellIdentifier
+        cell.textLabel.text = CellIdentifier
         var hex = clsroom.color
         
         var colorCella = UIColor()

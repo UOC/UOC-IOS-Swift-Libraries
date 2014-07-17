@@ -32,7 +32,7 @@ class MobileResourceList: NSObject {
         
         if (resourceData != nil){
             var resourceDict = NSJSONSerialization.JSONObjectWithData(resourceData, options: nil, error: nil) as NSDictionary
-            if (resourceDict.valueForKey("error") != nil){
+            if (resourceDict.valueForKey("error")){
                 println("Error en resources Get")
                 return self.mobileResources
             }

@@ -29,23 +29,29 @@ class Classroom: NSObject {
         self.code = dict.objectForKey("code") as NSString
         self.shortTitle = dict.objectForKey("shortTitle") as NSString
         self.planCode = dict.objectForKey("planCode") as? NSString
-        self.coursePlans = dict.objectForKey("coursePlans") as NSMutableArray
-        // println(self.coursePlans.objectAtIndex(0).description)
-        // Afegir course plans.
+        var n = dict.objectForKey("coursePlans").count
+        var i = 0
+        var auxArray = dict.objectForKey("coursePlans") as NSMutableArray
+        while (i < n){
+            var cp = CoursePlan()
+            cp.setDatos(auxArray.objectAtIndex(i) as NSDictionary)
+            self.coursePlans.addObject(cp)
+            i++
+        }
     }
     
     func getClassroomsId(iden: NSString, withToken token:NSString) -> Classroom{
         
         var c = Classroom()
         
-        var classroomURL = NSURL(string: baseUrl + "classrooms/" + iden + "?access_token=" + token)
+        var classroomURL = NSURL(string: "\(baseUrl)classrooms/\(iden)?access_token=\(token)")
         
         var classroomData = NSData.dataWithContentsOfURL(classroomURL, options: nil, error: nil)
         
         if (classroomData != nil){
             var classroomDict = NSJSONSerialization.JSONObjectWithData(classroomData, options: nil, error: nil) as NSDictionary
             println(classroomDict.description)
-            if (classroomDict.valueForKey("error") != nil){
+            if (classroomDict.valueForKey("error")){
                 println("Error en Classrooms Id Get")
                 return c
             }

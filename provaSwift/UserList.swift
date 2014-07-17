@@ -26,14 +26,14 @@ class UserList: NSObject {
     func getClassroomsIdPeople(idenC: NSString, withToken token:NSString) -> NSMutableArray{
         self.users.removeAllObjects()
         
-        var usersURL = NSURL(string: baseUrl + "classrooms/" + idenC + "/people?access_token=" + token)
+        var usersURL = NSURL(string: "\(baseUrl)classrooms/\(idenC)/people?access_token=\(token)")
         
         var usersData = NSData.dataWithContentsOfURL(usersURL, options: nil, error: nil)
         
         if (usersData != nil){
             var usersDict = NSJSONSerialization.JSONObjectWithData(usersData, options: nil, error: nil) as NSDictionary
             
-            if (usersDict.valueForKey("error") != nil){
+            if (usersDict.valueForKey("error")){
                 println("Error en Classrooms Id People Get")
                 return self.users
             }
@@ -46,14 +46,14 @@ class UserList: NSObject {
     func getClassroomsIdPeopleStudents(idenC: NSString, withToken token:NSString) -> NSMutableArray{
         self.users.removeAllObjects()
         
-        var usersURL = NSURL(string: baseUrl + "classrooms/" + idenC + "/people/students?access_token=" + token)
+        var usersURL = NSURL(string: "\(baseUrl)classrooms/\(idenC)/people/students?access_token=\(token)")
         
         var usersData = NSData.dataWithContentsOfURL(usersURL, options: nil, error: nil)
         
         if (usersData != nil){
             var usersDict = NSJSONSerialization.JSONObjectWithData(usersData, options: nil, error: nil) as NSDictionary
             
-            if (usersDict.valueForKey("error") != nil){
+            if (usersDict.valueForKey("error")){
                 println("Error en Classrooms Id People_Students Get")
                 return self.users
             }
@@ -66,14 +66,14 @@ class UserList: NSObject {
     func getClassroomsIdPeopleTeachers(idenC: NSString, withToken token:NSString) -> NSMutableArray{
         self.users.removeAllObjects()
         
-        var usersURL = NSURL(string: baseUrl + "classrooms/" + idenC + "/people/teachers?access_token=" + token)
+        var usersURL = NSURL(string: "\(baseUrl)classrooms/\(idenC)/people/teachers?access_token=\(token)")
         
         var usersData = NSData.dataWithContentsOfURL(usersURL, options: nil, error: nil)
         
         if (usersData != nil){
             var usersDict = NSJSONSerialization.JSONObjectWithData(usersData, options: nil, error: nil) as NSDictionary
             
-            if (usersDict.valueForKey("error") != nil){
+            if (usersDict.valueForKey("error")){
                 println("Error en Classrooms Id People_Teachers Get")
                 return self.users
             }
@@ -93,7 +93,7 @@ class UserList: NSObject {
         if (usersData != nil){
             var usersDict = NSJSONSerialization.JSONObjectWithData(usersData, options: nil, error: nil) as NSDictionary
             
-            if (usersDict.valueForKey("error") != nil){
+            if (usersDict.valueForKey("error")){
                 println("Error en People Id Tutors Get")
                 return self.users
             }
@@ -113,7 +113,7 @@ class UserList: NSObject {
         if (usersData != nil){
             var usersDict = NSJSONSerialization.JSONObjectWithData(usersData, options: nil, error: nil) as NSDictionary
             
-            if (usersDict.valueForKey("error") != nil){
+            if (usersDict.valueForKey("error")){
                 println("Error en User Tutors Get")
                 return self.users
             }

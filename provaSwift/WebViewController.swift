@@ -24,7 +24,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.WebView.delegate = self
-        var urlReq = NSURL(string: urlAuth + "?" + self.extra + "client_id=" + idClient + "&redirect_uri=" + urlRedirect + "&response_type=code")
+        var urlReq = NSURL(string: "\(urlAuth)?\(self.extra)client_id=\(idClient)&redirect_uri=\(urlRedirect)&response_type=code")
         var req = NSURLRequest(URL: urlReq)
         self.WebView.scalesPageToFit = true
         self.WebView.loadRequest(req)
@@ -62,7 +62,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
     }
     
     func accessTokenGET(code: NSString){
-        var postString = "client_id="+idClient+"&client_secret="+secretClient+"&grant_type=authorization_code&code="+code+"&redirect_uri="+urlRedirect
+        var postString = "client_id=\(idClient)&client_secret=\(secretClient)&grant_type=authorization_code&code=\(code)&redirect_uri=\(urlRedirect)"
         var url = NSURL(string: urlToken)
         var request = NSMutableURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: 60.0)
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)

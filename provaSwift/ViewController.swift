@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
     
     func ferLogin(){
         var stdDefaults = NSUserDefaults.standardUserDefaults()
-        if (stdDefaults.objectForKey("registrada") == nil){
+        
+        if (!stdDefaults.objectForKey("registrada")){
             self.viewController.extra = "device=" + UIDevice.currentDevice().name.stringByReplacingOccurrencesOfString(" ", withString: "%20") + "&"
             navigationController.pushViewController(viewController, animated: true)
         }
@@ -109,9 +111,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         var stdDefaults = NSUserDefaults.standardUserDefaults()
         var clauer = EZKeychainController()
-        if (stdDefaults.objectForKey("nextView") == nil) {
-            if (stdDefaults.objectForKey("registrada") != nil) {
-                if (stdDefaults.objectForKey("secret") == nil) {
+        if (!stdDefaults.objectForKey("nextView")) {
+            if (stdDefaults.objectForKey("registrada")) {
+                if (!stdDefaults.objectForKey("secret")) {
                     // afegir el loading
                     self.button1.enabled = false
                     self.loading.startAnimating()

@@ -36,7 +36,7 @@ class MobileResource: NSObject {
         
         if (resourceData != nil){
             var resourceDict = NSJSONSerialization.JSONObjectWithData(resourceData, options: nil, error: nil) as NSDictionary
-            if (resourceDict.valueForKey("error") != nil){
+            if (resourceDict.valueForKey("error")){
                 println("Error en resource_id Get")
                 return r
             }
@@ -55,7 +55,7 @@ class MobileResource: NSObject {
         
         if (resourceData != nil){
             var resourceDict = NSJSONSerialization.JSONObjectWithData(resourceData, options: nil, error: nil) as NSDictionary
-            if (resourceDict.valueForKey("error") != nil){
+            if (resourceDict.valueForKey("error")){
                 println("Error en resource_bytype Get")
                 return r
             }

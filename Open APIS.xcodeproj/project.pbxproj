@@ -13,8 +13,10 @@
 		25086E031952E47F00418172 /* MobileResourcesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25086E021952E47F00418172 /* MobileResourcesTableViewController.swift */; };
 		2516FF27195AD0B60033F16A /* NewEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2516FF26195AD0B60033F16A /* NewEventView.xib */; };
 		251B130A1941CC9B00CFE027 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B13091941CC9B00CFE027 /* NextViewController.swift */; };
+		251F9730196A844A0080B754 /* SettingValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F972F196A844A0080B754 /* SettingValue.swift */; };
 		2521B9A1195C560E003A37B7 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2521B9A0195C560E003A37B7 /* UserList.swift */; };
 		2526483D1941B56200150B90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526483C1941B56200150B90 /* Constants.swift */; };
+		252BBEA1196EA2D70084E018 /* MessageHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252BBEA0196EA2D70084E018 /* MessageHistory.swift */; };
 		2532EA87195C706400B84860 /* TeachingMaterialList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2532EA86195C706400B84860 /* TeachingMaterialList.swift */; };
 		2532EA89195C775F00B84860 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2532EA88195C775F00B84860 /* Classroom.swift */; };
 		25362158196401D2001F62F3 /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25362157196401D2001F62F3 /* BoardList.swift */; };
@@ -28,7 +30,9 @@
 		2576AB8F193F28E800ADB77A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2576AB8E193F28E800ADB77A /* ViewController.swift */; };
 		2576AB92193F28E800ADB77A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2576AB90193F28E800ADB77A /* Main.storyboard */; };
 		2576AB94193F28E800ADB77A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2576AB93193F28E800ADB77A /* Images.xcassets */; };
-		2576ABA0193F28E800ADB77A /* provaSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2576AB9F193F28E800ADB77A /* provaSwiftTests.swift */; };
+		2579A9B71966AF8600A0F50B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579A9B61966AF8600A0F50B /* Profile.swift */; };
+		2579A9B91966B0EA00A0F50B /* ProfileList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579A9B81966B0EA00A0F50B /* ProfileList.swift */; };
+		2579A9BB1966C8E700A0F50B /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2579A9BA1966C8E700A0F50B /* Setting.swift */; };
 		257ABF041965629800EADF91 /* PersonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257ABF031965629800EADF91 /* PersonList.swift */; };
 		257ABF061965651C00EADF91 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257ABF051965651C00EADF91 /* PeopleTableViewController.swift */; };
 		257ABF081965685200EADF91 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257ABF071965685200EADF91 /* PeopleViewController.swift */; };
@@ -38,6 +42,16 @@
 		257F90361958382E002F52DB /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257F90351958382E002F52DB /* NewEventViewController.swift */; };
 		2589BCCB1941D45300D1F190 /* authObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589BCCA1941D45300D1F190 /* authObj.swift */; };
 		259C150D1963FBEB003DC4AA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259C150C1963FBEB003DC4AA /* Board.swift */; };
+		259D0CB4196A96FE00F5CEAC /* SettingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259D0CB3196A96FE00F5CEAC /* SettingList.swift */; };
+		25ADB80C196FC5C500256FEB /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB80B196FC5C500256FEB /* Resource.swift */; };
+		25ADB80E196FE8B600256FEB /* ResourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB80D196FE8B600256FEB /* ResourceList.swift */; };
+		25ADB810196FEC8E00256FEB /* MessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB80F196FEC8E00256FEB /* MessageBody.swift */; };
+		25ADB812196FFC7800256FEB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB811196FFC7800256FEB /* Message.swift */; };
+		25ADB814196FFF6F00256FEB /* MessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB813196FFF6F00256FEB /* MessageList.swift */; };
+		25ADB8161970003D00256FEB /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB8151970003D00256FEB /* Folder.swift */; };
+		25ADB8181970017400256FEB /* FolderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADB8171970017400256FEB /* FolderList.swift */; };
+		25C93BB9196AB7B200523265 /* CoursePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C93BB8196AB7B200523265 /* CoursePlan.swift */; };
+		25C93BBB196ABAFD00523265 /* MessageHistoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C93BBA196ABAFD00523265 /* MessageHistoryDetail.swift */; };
 		25D26252195D67CF0072EA76 /* ClassroomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D26251195D67CF0072EA76 /* ClassroomList.swift */; };
 		25D26254195D69AC0072EA76 /* ClassroomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D26253195D69AC0072EA76 /* ClassroomsTableViewController.swift */; };
 		25D26256195D70610072EA76 /* TeachingMaterialsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D26255195D70610072EA76 /* TeachingMaterialsTableViewController.swift */; };
@@ -46,16 +60,6 @@
 		25F5AA4019470AC600D7AC66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5AA3F19470AC600D7AC66 /* User.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2576AB9A193F28E800ADB77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2576AB7C193F28E700ADB77A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2576AB83193F28E800ADB77A;
-			remoteInfo = provaSwift;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		25086DFB1952D83700418172 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		25086DFE1952DC3800418172 /* MobileResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileResource.swift; sourceTree = "<group>"; };
@@ -63,8 +67,10 @@
 		25086E021952E47F00418172 /* MobileResourcesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileResourcesTableViewController.swift; sourceTree = "<group>"; };
 		2516FF26195AD0B60033F16A /* NewEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewEventView.xib; sourceTree = "<group>"; };
 		251B13091941CC9B00CFE027 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		251F972F196A844A0080B754 /* SettingValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingValue.swift; sourceTree = "<group>"; };
 		2521B9A0195C560E003A37B7 /* UserList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		2526483C1941B56200150B90 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		252BBEA0196EA2D70084E018 /* MessageHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHistory.swift; sourceTree = "<group>"; };
 		2532EA86195C706400B84860 /* TeachingMaterialList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeachingMaterialList.swift; sourceTree = "<group>"; };
 		2532EA88195C775F00B84860 /* Classroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
 		25362157196401D2001F62F3 /* BoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
@@ -80,9 +86,11 @@
 		2576AB8E193F28E800ADB77A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2576AB91193F28E800ADB77A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2576AB93193F28E800ADB77A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2576AB99193F28E800ADB77A /* Open APISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Open APISTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2576AB9E193F28E800ADB77A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2576AB9F193F28E800ADB77A /* provaSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = provaSwiftTests.swift; sourceTree = "<group>"; };
+		2579A9B61966AF8600A0F50B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		2579A9B81966B0EA00A0F50B /* ProfileList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileList.swift; sourceTree = "<group>"; };
+		2579A9BA1966C8E700A0F50B /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		257ABF031965629800EADF91 /* PersonList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonList.swift; sourceTree = "<group>"; };
 		257ABF051965651C00EADF91 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		257ABF071965685200EADF91 /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +100,16 @@
 		257F90351958382E002F52DB /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		2589BCCA1941D45300D1F190 /* authObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authObj.swift; sourceTree = "<group>"; };
 		259C150C1963FBEB003DC4AA /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		259D0CB3196A96FE00F5CEAC /* SettingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingList.swift; sourceTree = "<group>"; };
+		25ADB80B196FC5C500256FEB /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		25ADB80D196FE8B600256FEB /* ResourceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceList.swift; sourceTree = "<group>"; };
+		25ADB80F196FEC8E00256FEB /* MessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBody.swift; sourceTree = "<group>"; };
+		25ADB811196FFC7800256FEB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		25ADB813196FFF6F00256FEB /* MessageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageList.swift; sourceTree = "<group>"; };
+		25ADB8151970003D00256FEB /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		25ADB8171970017400256FEB /* FolderList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderList.swift; sourceTree = "<group>"; };
+		25C93BB8196AB7B200523265 /* CoursePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePlan.swift; sourceTree = "<group>"; };
+		25C93BBA196ABAFD00523265 /* MessageHistoryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHistoryDetail.swift; sourceTree = "<group>"; };
 		25D26251195D67CF0072EA76 /* ClassroomList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomList.swift; sourceTree = "<group>"; };
 		25D26253195D69AC0072EA76 /* ClassroomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassroomsTableViewController.swift; sourceTree = "<group>"; };
 		25D26255195D70610072EA76 /* TeachingMaterialsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeachingMaterialsTableViewController.swift; sourceTree = "<group>"; };
@@ -102,13 +120,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		2576AB81193F28E800ADB77A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2576AB96193F28E800ADB77A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				2576AB84193F28E800ADB77A /* Open APIS.app */,
-				2576AB99193F28E800ADB77A /* Open APISTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,12 +227,27 @@
 				25362157196401D2001F62F3 /* BoardList.swift */,
 				2532EA88195C775F00B84860 /* Classroom.swift */,
 				25D26251195D67CF0072EA76 /* ClassroomList.swift */,
+				25C93BB8196AB7B200523265 /* CoursePlan.swift */,
 				257F902D195823E6002F52DB /* Event.swift */,
 				257F902F195830CB002F52DB /* EventList.swift */,
+				25ADB8151970003D00256FEB /* Folder.swift */,
+				25ADB8171970017400256FEB /* FolderList.swift */,
+				25ADB811196FFC7800256FEB /* Message.swift */,
+				25ADB80F196FEC8E00256FEB /* MessageBody.swift */,
+				25C93BBA196ABAFD00523265 /* MessageHistoryDetail.swift */,
+				252BBEA0196EA2D70084E018 /* MessageHistory.swift */,
+				25ADB813196FFF6F00256FEB /* MessageList.swift */,
 				25086DFE1952DC3800418172 /* MobileResource.swift */,
 				25086E001952DC4B00418172 /* MobileResourceList.swift */,
 				255EE81B19654F3A00CF7B1B /* Person.swift */,
 				257ABF031965629800EADF91 /* PersonList.swift */,
+				2579A9B61966AF8600A0F50B /* Profile.swift */,
+				2579A9B81966B0EA00A0F50B /* ProfileList.swift */,
+				25ADB80B196FC5C500256FEB /* Resource.swift */,
+				25ADB80D196FE8B600256FEB /* ResourceList.swift */,
+				2579A9BA1966C8E700A0F50B /* Setting.swift */,
+				259D0CB3196A96FE00F5CEAC /* SettingList.swift */,
+				251F972F196A844A0080B754 /* SettingValue.swift */,
 				255300B5195C65CE002974E9 /* TeachingMaterial.swift */,
 				2532EA86195C706400B84860 /* TeachingMaterialList.swift */,
 				25F5AA3F19470AC600D7AC66 /* User.swift */,
@@ -251,24 +276,6 @@
 			productReference = 2576AB84193F28E800ADB77A /* Open APIS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2576AB98193F28E800ADB77A /* Open APISTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2576ABA6193F28E800ADB77A /* Build configuration list for PBXNativeTarget "Open APISTests" */;
-			buildPhases = (
-				2576AB95193F28E800ADB77A /* Sources */,
-				2576AB96193F28E800ADB77A /* Frameworks */,
-				2576AB97193F28E800ADB77A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2576AB9B193F28E800ADB77A /* PBXTargetDependency */,
-			);
-			name = "Open APISTests";
-			productName = provaSwiftTests;
-			productReference = 2576AB99193F28E800ADB77A /* Open APISTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -281,10 +288,6 @@
 					2576AB83193F28E800ADB77A = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = P426M5SKYQ;
-					};
-					2576AB98193F28E800ADB77A = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 2576AB83193F28E800ADB77A;
 					};
 				};
 			};
@@ -302,7 +305,6 @@
 			projectRoot = "";
 			targets = (
 				2576AB83193F28E800ADB77A /* Open APIS */,
-				2576AB98193F28E800ADB77A /* Open APISTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,13 +321,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2576AB97193F28E800ADB77A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -334,9 +329,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2521B9A1195C560E003A37B7 /* UserList.swift in Sources */,
+				25ADB810196FEC8E00256FEB /* MessageBody.swift in Sources */,
+				25ADB80E196FE8B600256FEB /* ResourceList.swift in Sources */,
 				25EF58C4194AF41200C01688 /* EZKeychainController.swift in Sources */,
 				25086DFC1952D83700418172 /* UserViewController.swift in Sources */,
+				25ADB814196FFF6F00256FEB /* MessageList.swift in Sources */,
+				25C93BB9196AB7B200523265 /* CoursePlan.swift in Sources */,
 				25086DFF1952DC3800418172 /* MobileResource.swift in Sources */,
+				25ADB8181970017400256FEB /* FolderList.swift in Sources */,
+				251F9730196A844A0080B754 /* SettingValue.swift in Sources */,
 				25D26254195D69AC0072EA76 /* ClassroomsTableViewController.swift in Sources */,
 				2576AB8F193F28E800ADB77A /* ViewController.swift in Sources */,
 				25D26252195D67CF0072EA76 /* ClassroomList.swift in Sources */,
@@ -346,45 +347,38 @@
 				25750B6A19406CBA00E9D14A /* navViewController.swift in Sources */,
 				25EF58C2194AF3FD00C01688 /* EZKeychain.swift in Sources */,
 				257F902E195823E6002F52DB /* Event.swift in Sources */,
+				25ADB812196FFC7800256FEB /* Message.swift in Sources */,
 				2532EA89195C775F00B84860 /* Classroom.swift in Sources */,
 				257F9030195830CB002F52DB /* EventList.swift in Sources */,
 				257F903419583254002F52DB /* CalendarEventsTableViewController.swift in Sources */,
 				257F90361958382E002F52DB /* NewEventViewController.swift in Sources */,
 				2532EA87195C706400B84860 /* TeachingMaterialList.swift in Sources */,
 				25086E031952E47F00418172 /* MobileResourcesTableViewController.swift in Sources */,
+				2579A9B91966B0EA00A0F50B /* ProfileList.swift in Sources */,
+				2579A9B71966AF8600A0F50B /* Profile.swift in Sources */,
 				25362158196401D2001F62F3 /* BoardList.swift in Sources */,
 				25750B6E19407C1C00E9D14A /* WebViewController.swift in Sources */,
 				25086E011952DC4B00418172 /* MobileResourceList.swift in Sources */,
 				25F5AA4019470AC600D7AC66 /* User.swift in Sources */,
+				2579A9BB1966C8E700A0F50B /* Setting.swift in Sources */,
 				257ABF061965651C00EADF91 /* PeopleTableViewController.swift in Sources */,
 				2589BCCB1941D45300D1F190 /* authObj.swift in Sources */,
 				257ABF081965685200EADF91 /* PeopleViewController.swift in Sources */,
 				2576AB8A193F28E800ADB77A /* AppDelegate.swift in Sources */,
+				25ADB80C196FC5C500256FEB /* Resource.swift in Sources */,
 				25D26256195D70610072EA76 /* TeachingMaterialsTableViewController.swift in Sources */,
 				255300B6195C65CE002974E9 /* TeachingMaterial.swift in Sources */,
 				2526483D1941B56200150B90 /* Constants.swift in Sources */,
 				257ABF041965629800EADF91 /* PersonList.swift in Sources */,
+				25C93BBB196ABAFD00523265 /* MessageHistoryDetail.swift in Sources */,
 				259C150D1963FBEB003DC4AA /* Board.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2576AB95193F28E800ADB77A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2576ABA0193F28E800ADB77A /* provaSwiftTests.swift in Sources */,
+				25ADB8161970003D00256FEB /* Folder.swift in Sources */,
+				252BBEA1196EA2D70084E018 /* MessageHistory.swift in Sources */,
+				259D0CB4196A96FE00F5CEAC /* SettingList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2576AB9B193F28E800ADB77A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2576AB83193F28E800ADB77A /* Open APIS */;
-			targetProxy = 2576AB9A193F28E800ADB77A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2576AB90193F28E800ADB77A /* Main.storyboard */ = {
@@ -505,42 +499,6 @@
 			};
 			name = Release;
 		};
-		2576ABA7193F28E800ADB77A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/provaSwift.app/provaSwift";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = provaSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "Open APISTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		2576ABA8193F28E800ADB77A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/provaSwift.app/provaSwift";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = provaSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "Open APISTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -558,15 +516,6 @@
 			buildConfigurations = (
 				2576ABA4193F28E800ADB77A /* Debug */,
 				2576ABA5193F28E800ADB77A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2576ABA6193F28E800ADB77A /* Build configuration list for PBXNativeTarget "Open APISTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2576ABA7193F28E800ADB77A /* Debug */,
-				2576ABA8193F28E800ADB77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

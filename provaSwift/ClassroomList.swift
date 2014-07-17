@@ -26,7 +26,7 @@ class ClassroomList: NSObject {
     func getClassrooms(token : NSString) -> NSMutableArray{
         self.classrooms.removeAllObjects()
         
-        var classroomsURL = NSURL(string: baseUrl + "classrooms?access_token=" + token)
+        var classroomsURL = NSURL(string: "\(baseUrl)classrooms?access_token=\(token)")
         
         var classroomsData = NSData.dataWithContentsOfURL(classroomsURL, options: nil, error: nil)
         
@@ -35,7 +35,7 @@ class ClassroomList: NSObject {
             var classroomsDict = NSJSONSerialization.JSONObjectWithData(classroomsData, options: nil, error: nil) as NSDictionary
             println(classroomsDict.description)
 
-            if(classroomsDict.valueForKey("error") != nil){
+            if(classroomsDict.valueForKey("error")){
                 println("Error Classrooms Get")
                 return self.classrooms
             }

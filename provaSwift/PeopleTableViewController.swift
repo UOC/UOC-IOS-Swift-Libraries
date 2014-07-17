@@ -56,7 +56,7 @@ class PeopleTableViewController: UITableViewController {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
-        cell.text = CellIdentifier
+        cell.textLabel.text = CellIdentifier
         // Configure the cell...
         
         return cell

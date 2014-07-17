@@ -14,12 +14,14 @@ class TeachingMaterialList: NSObject {
     func setDatos(dict: NSDictionary){
         var n = dict.objectForKey("materials").count
         var i = 0
-        var auxArray = dict.objectForKey("materials") as NSMutableArray
-        while (i < n){
-            var m = TeachingMaterial()
-            m.setDatos(auxArray.objectAtIndex(i) as NSDictionary)
-            self.materials.addObject(m)
-            i++
+        if(n > 0){
+            var auxArray = dict.objectForKey("materials") as NSMutableArray
+            while (i < n){
+                var m = TeachingMaterial()
+                m.setDatos(auxArray.objectAtIndex(i) as NSDictionary)
+                self.materials.addObject(m)
+                i++
+            }
         }
     }
     
@@ -34,7 +36,7 @@ class TeachingMaterialList: NSObject {
         if (materialsData != nil){
             var materialsDict = NSJSONSerialization.JSONObjectWithData(materialsData, options: nil, error: nil) as NSDictionary
             println(materialsDict.description)
-            if (materialsDict.valueForKey("error") != nil){
+            if (materialsDict.valueForKey("error")){
                 println("Error en Classrooms Id Materials Get")
                 return self.materials
             }

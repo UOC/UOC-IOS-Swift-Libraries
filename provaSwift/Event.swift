@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class Event: NSObject {
     
@@ -39,7 +40,7 @@ class Event: NSObject {
         
         if (eventData != nil){
             var eventDict = NSJSONSerialization.JSONObjectWithData(eventData, options: nil, error: nil) as NSDictionary
-            if (eventDict.valueForKey("error") != nil){
+            if (eventDict.valueForKey("error")){
                 println("Error en get Calendar Events Id")
                 return e
             }
@@ -73,7 +74,7 @@ class Event: NSObject {
         if (data != nil){
             var eventDict : NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
             
-            if (eventDict.valueForKey("error") != nil){
+            if (eventDict.valueForKey("error")){
                 println("Error Post Calendar Events")
                 return e
             }

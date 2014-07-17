@@ -15,6 +15,7 @@ class PeopleViewController: UIViewController {
     @IBOutlet var email: UILabel
     @IBOutlet var personalSite: UILabel
     @IBOutlet var blog: UILabel
+    @IBOutlet var profileId: UILabel
     
     var person = Person()
     
@@ -41,6 +42,8 @@ class PeopleViewController: UIViewController {
         else{
             self.blog.text = "blog: NULL"
         }
+        var p = person.profiles.objectAtIndex(0) as Profile
+        self.profileId.text = "Profile id:" + p.identifier
     }
     
     /*

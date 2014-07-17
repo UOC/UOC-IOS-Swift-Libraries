@@ -11,7 +11,7 @@ import UIKit
 class TeachingMaterial: NSObject {
    
     var identifier : NSString = ""
-    var type : NSString? // Tots els valors que puguin ser null s'indiquen aixi
+    var type : NSString? = ""// Tots els valors que puguin ser null s'indiquen aixi
     var title : NSString = ""
     var url : NSString = ""
     
@@ -26,14 +26,14 @@ class TeachingMaterial: NSObject {
     func getClassroomsIdMaterialsId(idenC: NSString, MaterialId idenM: NSString, withToken token: NSString) ->TeachingMaterial{
         var m = TeachingMaterial()
         
-        var materialURL = NSURL(string: baseUrl + "classrooms/" + idenC + "/materials/" + idenM + "?access_token=" + token)
+        var materialURL = NSURL(string: "\(baseUrl)classrooms/\(idenC)/materials/\(idenM)?access_token=\(token)")
         
         var materialData = NSData.dataWithContentsOfURL(materialURL, options: nil, error: nil)
         
         if (materialData != nil){
             var materialDict = NSJSONSerialization.JSONObjectWithData(materialData, options: nil, error: nil) as NSDictionary
             
-            if (materialDict.valueForKey("error") != nil){
+            if (materialDict.valueForKey("error")){
                 println("Error Classrooms ID Materials ID Get")
                 return m
             }
@@ -51,7 +51,7 @@ class TeachingMaterial: NSObject {
         
         var jsonData = NSJSONSerialization.dataWithJSONObject(nouMaterial, options: NSJSONWritingOptions.PrettyPrinted, error: nil) as NSData
         
-        var materialsURL = NSURL(string: baseUrl + "classrooms/" + idenC + "/materials?access_token=" + token)
+        var materialsURL = NSURL(string: "\(baseUrl)classrooms/\(idenC)/materials?access_token=\(token)")
         
         var request = NSMutableURLRequest(URL: materialsURL)
         request.HTTPMethod = "POST"
@@ -63,7 +63,7 @@ class TeachingMaterial: NSObject {
         if (data != nil){
             var materialsDict : NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
             
-            if (materialsDict.valueForKey("error") != nil){
+            if (materialsDict.valueForKey("error")){
                 println("Error Post Calendar Events")
                 return m
             }

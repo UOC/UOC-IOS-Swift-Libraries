@@ -65,7 +65,7 @@ class authObj: NSObject {
         // S'ha de fer amb KeyChain mentrestant
         var clauer = EZKeychainController()
         
-        var postString : NSString = "client_id="+clauer.stringForKey("client")!+"&client_secret="+clauer.stringForKey("secret")!+"&grant_type=refresh_token"+"&refresh_token="+refreshToken
+        var postString : NSString = "client_id="+clauer.stringForKey("client")!+"&client_secret="+clauer.stringForKey("secret")!+"&grant_type=refresh_token&refresh_token="+refreshToken
         
         //println("PostString : " + postString)
         

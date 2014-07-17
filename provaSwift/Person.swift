@@ -44,6 +44,9 @@ class Person: NSObject {
         self.ngoes = personDictionary.objectForKey("ngoes") as? NSString
         self.personalSite = personDictionary.objectForKey("personalSite") as? NSString
         // POSAR PROFILES
+        var profilesAux = ProfileList()
+        profilesAux.setDatos(personDictionary)
+        self.profiles = profilesAux.profiles
         self.secondaryEmail = personDictionary.objectForKey("secondaryEmail") as? NSString
         self.skills = personDictionary.objectForKey("skills") as? NSString
         self.surname1 = personDictionary.objectForKey("surname1") as NSString
@@ -63,7 +66,7 @@ class Person: NSObject {
         if (personData != nil){
             var personDict = NSJSONSerialization.JSONObjectWithData(personData, options: nil, error: nil) as NSDictionary
             
-            if(personDict.valueForKey("error") != nil){
+            if(personDict.valueForKey("error")){
                 println("error getPeopleId")
                 return p
             }

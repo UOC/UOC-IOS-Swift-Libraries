@@ -32,8 +32,8 @@ class PersonList: NSObject {
         
         if(peopleData != nil){
             var peopleDict = NSJSONSerialization.JSONObjectWithData(peopleData, options: nil, error: nil) as NSDictionary
-            
-            if(peopleDict.valueForKey("error") != nil){
+            // println(peopleDict.description)
+            if(peopleDict.valueForKey("error")){
                 println("error people GET")
                 return self.people
             }

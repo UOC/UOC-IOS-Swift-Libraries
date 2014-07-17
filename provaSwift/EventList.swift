@@ -32,7 +32,7 @@ class EventList: NSObject {
         
         if (eventsData != nil){
             var eventsDict = NSJSONSerialization.JSONObjectWithData(eventsData, options: nil, error: nil) as NSDictionary
-            if (eventsDict.valueForKey("error") != nil){
+            if (eventsDict.valueForKey("error")){
                 println("Error en events Get")
                 return self.events
             }

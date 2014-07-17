@@ -45,7 +45,7 @@ class User: NSObject {
         
         if (userData != nil){
             var userDict = NSJSONSerialization.JSONObjectWithData(userData, options: nil, error: nil) as NSDictionary
-            if (userDict.valueForKey("error") != nil){
+            if (userDict.valueForKey("error")){
                 println("Error en user Get")
                 return u
             }
