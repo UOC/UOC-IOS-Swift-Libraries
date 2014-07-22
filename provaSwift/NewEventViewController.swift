@@ -25,13 +25,13 @@ class NewEventViewController: UIViewController {
     @IBAction func creaEvent(sender: AnyObject) {
         self.agafarDades()
     }
-    @IBOutlet var url: UITextField
+    @IBOutlet var url: UITextField!
     
-    @IBOutlet var summary: UITextField
+    @IBOutlet var summary: UITextField!
     
-    @IBOutlet var inici: UIDatePicker
+    @IBOutlet var inici: UIDatePicker!
 
-    @IBOutlet var final: UIDatePicker
+    @IBOutlet var final: UIDatePicker!
     
     
     

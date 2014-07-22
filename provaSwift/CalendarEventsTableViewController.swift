@@ -52,7 +52,7 @@ class CalendarEventsTableViewController: UITableViewController {
                 var e : Event = Event().postCalendarEvents(self.newEventV.event, withToken: self.auth.accessToken)
                 
                 dispatch_async(dispatch_get_main_queue(), {
-                    println("Creat " + e.identifier)
+                    println("Creat \(e.identifier)")
                     self.carregarEvents()
                     self.newEventV = NewEventViewController(nibName: "NewEventView", bundle: nil)
                     UIApplication.sharedApplication().networkActivityIndicatorVisible = false

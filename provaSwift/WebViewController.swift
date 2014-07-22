@@ -10,7 +10,7 @@ import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDataDelegate, NSURLConnectionDelegate{
 
-    @IBOutlet var WebView : UIWebView
+    @IBOutlet var WebView : UIWebView!
     
     var receivedData : NSMutableData = NSMutableData()
     
@@ -23,6 +23,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.WebView.delegate = self
         var urlReq = NSURL(string: "\(urlAuth)?\(self.extra)client_id=\(idClient)&redirect_uri=\(urlRedirect)&response_type=code")
         var req = NSURLRequest(URL: urlReq)
@@ -36,7 +37,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
         // Dispose of any resources that can be recreated.
     }
     
-    func webViewDidFinishLoad(webView: UIWebView){
+    func webViewDidFinishLoad(_: UIWebView){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
@@ -45,7 +46,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
         navigationType: UIWebViewNavigationType) -> Bool{
             var urlRequest = request.URL.absoluteString
             //println(urlRequest)
-            if (urlRequest.rangeOfString("?code=").isEmpty) {
+            if (!urlRequest.rangeOfString("?code=")) {
                 //println("No token request provided")
                 return true
             }
@@ -57,7 +58,7 @@ class WebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDat
             }
     }
     
-    func webViewDidStartLoad(webView: UIWebView){
+    func webViewDidStartLoad(_: UIWebView){
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     }
     

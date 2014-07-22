@@ -11,8 +11,8 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    @IBOutlet var button1 : UIButton
-    @IBOutlet var loading : UIActivityIndicatorView
+    @IBOutlet var button1 : UIButton!
+    @IBOutlet var loading : UIActivityIndicatorView!
     
     var auth : authObj = authObj()
     
@@ -68,7 +68,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func esborrar() {
-        borraVariables()
+        // ALERTVIEW + DELEGATE
+        let alert = UIAlertController(title: "Sign Out", message: "Are you sure?", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "YES", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+            self.borraVariables()
+            }))
+        alert.addAction(UIAlertAction(title: "NO", style: UIAlertActionStyle.Default, handler: nil))
+
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func borraVariables(){
@@ -91,10 +98,11 @@ class ViewController: UIViewController {
         //var cookie = NSHTTPCookie()
         var storage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
         for cookie : AnyObject in storage.cookies{
-            println("elimina")
+            println("elimina Cookie")
             storage.deleteCookie(cookie as NSHTTPCookie)
         }
         stdDefaults.synchronize()
+        viewController = WebViewController(nibName: "webView", bundle:nil)
     }
     
     override func viewDidLoad() {
@@ -122,12 +130,14 @@ class ViewController: UIViewController {
                         if(self.viewController.receivedData != nil){
                             var oAuth = NSJSONSerialization.JSONObjectWithData(self.viewController.receivedData, options: nil, error: nil) as NSDictionary
                             self.auth.setAuth(oAuth)
-                            var obtenirCredencials = NSURL(string: urlApp + "?access_token=" + self.auth.accessToken)
+                            var obtenirCredencials = NSURL(string: "\(urlApp)?access_token=\(self.auth.accessToken)")
                             var credencials = NSData.dataWithContentsOfURL(obtenirCredencials, options: nil, error: nil)
                             var credencialsDict = NSJSONSerialization.JSONObjectWithData(credencials, options: nil, error: nil) as NSDictionary
                             stdDefaults.setValue("OK", forKey: "secret")
                             stdDefaults.setValue("OK", forKey: "client")
                             stdDefaults.setValue("OK", forKey: "access_token")
+                            
+                            println(credencialsDict.description)
                             
                             clauer.storeString(credencialsDict.valueForKey("secret") as NSString, forKey: "secret")
                             clauer.storeString(credencialsDict.valueForKey("client") as NSString, forKey: "client")

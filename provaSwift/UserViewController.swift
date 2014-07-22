@@ -10,15 +10,15 @@ import UIKit
 
 class UserViewController: UIViewController {
 
-    @IBOutlet var username : UILabel
-    @IBOutlet var name : UILabel
-    @IBOutlet var number : UILabel
-    @IBOutlet var fullname : UILabel
-    @IBOutlet var email : UILabel
-    @IBOutlet var ident : UILabel
-    @IBOutlet var languages : UILabel
-    @IBOutlet var sessionId : UILabel
-    @IBOutlet var imageUser : UIImageView
+    @IBOutlet var username : UILabel!
+    @IBOutlet var name : UILabel!
+    @IBOutlet var number : UILabel!
+    @IBOutlet var fullname : UILabel!
+    @IBOutlet var email : UILabel!
+    @IBOutlet var ident : UILabel!
+    @IBOutlet var languages : UILabel!
+    @IBOutlet var sessionId : UILabel!
+    @IBOutlet var imageUser : UIImageView!
     
     
     var user : User = User()
@@ -57,14 +57,14 @@ class UserViewController: UIViewController {
     }
     
     func mostrarDatosUsuario(){
-        self.username.text = "Username: " + self.user.username
-        self.name.text = "name: " + self.user.name
-        self.number.text = "number: " + self.user.number
-        self.fullname.text = "fullName: " + self.user.fullname
-        self.email.text = "email: " + self.user.email
-        self.ident.text = "id: " + self.user.identifier
-        self.languages.text = "language: " + self.user.language
-        self.sessionId.text = "sessionId: " + self.user.sessionID
+        self.username.text = "Username: \(self.user.username)"
+        self.name.text = "name: \(self.user.name)"
+        self.number.text = "number: \(self.user.number)"
+        self.fullname.text = "fullName: \(self.user.fullname)"
+        self.email.text = "email: \(self.user.email)"
+        self.ident.text = "id: \(self.user.identifier)"
+        self.languages.text = "language: \(self.user.language)"
+        self.sessionId.text = "sessionId: \(self.user.sessionID)"
         self.imageUser.image = self.user.photo
     }
     /*

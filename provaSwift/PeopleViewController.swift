@@ -11,11 +11,11 @@ import UIKit
 class PeopleViewController: UIViewController {
 
     
-    @IBOutlet var fullName: UILabel
-    @IBOutlet var email: UILabel
-    @IBOutlet var personalSite: UILabel
-    @IBOutlet var blog: UILabel
-    @IBOutlet var profileId: UILabel
+    @IBOutlet var fullName: UILabel!
+    @IBOutlet var email: UILabel!
+    @IBOutlet var personalSite: UILabel!
+    @IBOutlet var blog: UILabel!
+    @IBOutlet var profileId: UILabel!
     
     var person = Person()
     
@@ -32,9 +32,9 @@ class PeopleViewController: UIViewController {
     
 
     func mostrarPerson(){
-        self.fullName.text = "fullName: " + person.fullName
-        self.email.text = "email: " + person.email
-        if (person.personalSite != nil) {self.personalSite.text = "personalSite: " + person.personalSite!}
+        self.fullName.text = "fullName: \(person.fullName)"
+        self.email.text = "email: \(person.email)"
+        if (person.personalSite != nil) {self.personalSite.text = "personalSite: \(person.personalSite!)"}
         else {
             self.personalSite.text = "personalSite: NULL"
         }
@@ -43,7 +43,7 @@ class PeopleViewController: UIViewController {
             self.blog.text = "blog: NULL"
         }
         var p = person.profiles.objectAtIndex(0) as Profile
-        self.profileId.text = "Profile id:" + p.identifier
+        self.profileId.text = "Profile id: \(p.identifier)"
     }
     
     /*

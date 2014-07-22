@@ -47,7 +47,8 @@ class TeachingMaterial: NSObject {
     func postClassroomIdMaterials(idenC: NSString, material postMaterial:TeachingMaterial, withToken token:NSString) -> TeachingMaterial{
         var m = TeachingMaterial()
         
-        var nouMaterial : NSDictionary = ["id":postMaterial.identifier,"type":postMaterial.type,"title":postMaterial.title,"url":postMaterial.url]
+        var nouMaterial : NSDictionary = ["id":postMaterial.identifier,"type":postMaterial.type!,"title":postMaterial.title,"url":postMaterial.url] as NSDictionary
+        
         
         var jsonData = NSJSONSerialization.dataWithJSONObject(nouMaterial, options: NSJSONWritingOptions.PrettyPrinted, error: nil) as NSData
         

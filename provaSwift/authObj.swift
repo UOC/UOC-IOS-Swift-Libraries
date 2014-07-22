@@ -59,13 +59,17 @@ class authObj: NSObject {
     
     
     func refreshAccessToken(){
-        println("entra refresh amb RT = "+refreshToken)
+        println("entra refresh amb RT = \(refreshToken)")
         var stdDefaults = NSUserDefaults.standardUserDefaults()
         
         // S'ha de fer amb KeyChain mentrestant
         var clauer = EZKeychainController()
         
-        var postString : NSString = "client_id="+clauer.stringForKey("client")!+"&client_secret="+clauer.stringForKey("secret")!+"&grant_type=refresh_token&refresh_token="+refreshToken
+        var clauerClient = clauer.stringForKey("client")!
+        var clauerSecret = clauer.stringForKey("secret")!
+        
+        var postString : NSString = "client_id=\(clauerClient)&client_secret=\(clauerSecret)&grant_type=refresh_token&refresh_token=\(refreshToken)"
+        
         
         //println("PostString : " + postString)
         
